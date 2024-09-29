@@ -1,5 +1,4 @@
 import os
-import subprocess
 
 # Directory where the project will be created
 project_dir = 'memory-game'
@@ -72,10 +71,14 @@ p {
 '''
 
 js_content = '''const cardsArray = [
-    { name: 'cheetah', img: 'cheetah.jpg' },
-    { name: 'cheetah', img: 'cheetah.jpg' },
-    { name: 'lion', img: 'lion.jpg' },
-    { name: 'lion', img: 'lion.jpg' },
+    { name: 'cheetah', img: 'https://cdn.pixabay.com/photo/2015/11/17/14/36/cheetah-1045990_960_720.jpg' },
+    { name: 'cheetah', img: 'https://cdn.pixabay.com/photo/2015/11/17/14/36/cheetah-1045990_960_720.jpg' },
+    { name: 'lion', img: 'https://cdn.pixabay.com/photo/2013/05/29/15/00/lion-114130_960_720.jpg' },
+    { name: 'lion', img: 'https://cdn.pixabay.com/photo/2013/05/29/15/00/lion-114130_960_720.jpg' },
+    { name: 'elephant', img: 'https://cdn.pixabay.com/photo/2017/08/01/08/29/elephant-2567437_960_720.jpg' },
+    { name: 'elephant', img: 'https://cdn.pixabay.com/photo/2017/08/01/08/29/elephant-2567437_960_720.jpg' },
+    { name: 'giraffe', img: 'https://cdn.pixabay.com/photo/2017/02/10/19/00/giraffe-2053516_960_720.jpg' },
+    { name: 'giraffe', img: 'https://cdn.pixabay.com/photo/2017/02/10/19/00/giraffe-2053516_960_720.jpg' }
 ];
 
 let gameBoard = document.getElementById('game-board');
@@ -192,10 +195,4 @@ create_file('styles.css', css_content)
 create_file('script.js', js_content)
 create_file('package.json', package_json_content)
 
-# Install npm dependencies
-print("Installing npm dependencies...")
-subprocess.run(['npm', 'install'])
-
-# Run the game using npm start
-print("Running the game...")
-subprocess.run(['npm', 'start'])
+print("Files created successfully!")
